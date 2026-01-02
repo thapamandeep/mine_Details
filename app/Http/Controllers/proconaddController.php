@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Address;
 
 class proconaddController extends Controller
 {
@@ -46,6 +47,16 @@ class proconaddController extends Controller
       die;
 
       return view('contact.index',compact('allcontacts'));
+   }
+   public function addresstable(){
+      $alladdresses = Address::all();
+
+      $alladdresses = json_decode(json_encode($alladdresses),true);
+      echo "<pre>";
+      print_r($alladdresses);
+      die;
+
+      return view ('Address.index',compact('alladdresses'));
    }
 
 

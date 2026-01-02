@@ -10,6 +10,7 @@ Route::get('/contact-view',[proconaddController::class,'conview'])->name('contac
 Route::get('/address-view',[proconaddController::class,'addview'])->name('addressView');
 Route::get('/profile-table-view',[proconaddController::class,'profiletable'])->name('profileTable');
 Route::get('/contact-table-view',[proconaddController::class,'contacttable'])->name('contactTable');
+Route::get('/address-table-view',[proconaddController::class,'addresstable'])->name('addressTable');
 
 
 

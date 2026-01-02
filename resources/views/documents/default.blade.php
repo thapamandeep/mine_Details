@@ -11,5 +11,6 @@
     <a href="{{route('addressView')}}"><button>Address</button></a>
     <a href="{{route('profileTable')}}"><button>Profile Table View</button></a>
     <a href="{{route('contactTable')}}"><button>Contact Table View</button></a>
+    <a href="{{route('addressTable')}}"><button>Address Table View</button></a>
 </body>
 </html>
