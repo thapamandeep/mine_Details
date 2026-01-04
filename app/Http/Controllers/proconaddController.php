@@ -62,22 +62,28 @@ class proconaddController extends Controller
       return view('contact.index',compact('somecontacts'));
    }
    public function addresstable(){
-      // $alladdresses = Address::all();
+      $alladdresses = Address::all();
 
       // $alladdresses = json_decode(json_encode($alladdresses),true);
       // echo "<pre>";
       // print_r($alladdresses);
       // die;
 
-      $someaddress = address::findOrFail(2);
+      // $someaddress = address::findOrFail(2);
 
-        $someaddress = json_decode(json_encode($someaddress),true);
-      echo "<pre>";
-      print_r($someaddress);
-      die;
+      //   $someaddress = json_decode(json_encode($someaddress),true);
+      // echo "<pre>";
+      // print_r($someaddress);
+      // die;
       
 
-      return view ('Address.index',compact('someaddress'));
+      return view ('Address.index',compact('alladdresses'));
+   }
+
+   public function addressView($id){
+      $someaddress = Address::findOrFail($id);
+
+      return view('Address.addressview', compact('someaddress'));
    }
 
 

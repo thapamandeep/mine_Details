@@ -12,6 +12,8 @@ Route::get('/profile-table-view',[proconaddController::class,'profiletable'])->n
 Route::get('/contact-table-view',[proconaddController::class,'contacttable'])->name('contactTable');
 Route::get('/address-table-view',[proconaddController::class,'addresstable'])->name('addressTable');
 
+Route::get('/address-data-view/view/{id}',[proconaddController::class,'addressview'])->name('addressDataview');
+
 
 
 Route::post('/about-mine',[AboutmineController::class,'profilestore'])->name('profileStore');
