@@ -12,9 +12,13 @@ Route::get('/profile-table-view',[proconaddController::class,'profiletable'])->n
 Route::get('/contact-table-view',[proconaddController::class,'contacttable'])->name('contactTable');
 Route::get('/address-table-view',[proconaddController::class,'addresstable'])->name('addressTable');
 
+// for single view data
+
 Route::get('/address-data-view/view/{id}',[proconaddController::class,'addressview'])->name('addressDataview');
+Route::get('/profile-data-view/view/{id}',[proconaddController::class,'profileview'])->name('profileDataview');
+Route::get('/contact-data-view/view/{id}',[proconaddController::class,'contactview'])->name('contactDataview');
 
-
+// 
 
 Route::post('/about-mine',[AboutmineController::class,'profilestore'])->name('profileStore');
 Route::post('/contact-mine',[AboutmineController::class,'contactstore'])->name('contactStore');

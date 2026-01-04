@@ -37,8 +37,6 @@ tr:nth-child(even) {
         <td>{{ $address->city }}</td>
         <td>{{ $address->street }}</td>
 
-
-    
        <td><a href="{{ route('addressDataview', $address->id)}}"><button >View</button></a></td>
        
     </tr>

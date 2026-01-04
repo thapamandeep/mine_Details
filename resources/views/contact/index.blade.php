@@ -33,6 +33,7 @@ tr:nth-child(even) {
     <tr>
             <th>your Emaile</th>
             <th>your Number</th>
+            <th>Action</th>
     </tr>
   
     @foreach($somecontacts as $contact)
@@ -40,6 +41,7 @@ tr:nth-child(even) {
     <tr>
         <td>{{ $contact->email }}</td>
         <td>{{ $contact->number }}</td>
+        <td><a href="{{ route('contactDataview',$contact->id) }}"><button>View</button></a></td>
     </tr>
     @endforeach
     </table>

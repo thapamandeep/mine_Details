@@ -50,12 +50,12 @@ class proconaddController extends Controller
    // $somecontacts = contact::where('email','arbin67@gmail.com')->first();
    
    // $somecontacts = contact::findOrFail(100);
-    $somecontacts = contact::find(3);
+    $somecontacts = Contact::all();
 
-      $somecontacts = json_decode(json_encode($somecontacts),true);
-      echo "<pre>";
-      print_r($somecontacts);
-      die;
+      // $somecontacts = json_decode(json_encode($somecontacts),true);
+      // echo "<pre>";
+      // print_r($somecontacts);
+      // die;
 
 
 
@@ -86,6 +86,17 @@ class proconaddController extends Controller
       return view('Address.addressview', compact('someaddress'));
    }
 
+   public function profileview($id){
+      $someprofile = About::findOrFail($id);
+
+      return view('profile.profileview', compact('someprofile'));
+   }
+
+   public function contactview($id){
+      $somecontact = Contact::findOrFail($id);
+
+      return view('contact.contactview', compact('somecontact'));
+   }
 
    
 }
