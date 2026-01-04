@@ -28,13 +28,15 @@ tr:nth-child(even) {
 
 <table>
     <tr>
-        <td>City</td>
-        <td>Street</td>
+        <th>City</th>
+        <th>Street</th>
+        <th>Action</th>
     </tr>
-@foreach($alladdresses as $address)
+@foreach($someaddress as $address)
     <tr>
-        <td>{{ $alladdresses->City }}</td>
-        <td>{{ $alladdresses->Street }}</td>
+        <td>{{ $address->city }}</td>
+        <td>{{ $address->street }}</td>
+       <td><button >View</button></td>
     </tr>
     @endforeach
 </table>

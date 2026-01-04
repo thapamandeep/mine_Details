@@ -7,6 +7,8 @@ use App\Models\About;
 use App\Models\Contact;
 use App\Models\Address;
 
+use Illuminate\Support\Facades\Session;
+
 class AboutmineController extends Controller
 {
     public function profilestore(Request $request){
@@ -42,6 +44,7 @@ class AboutmineController extends Controller
     
         $contact->save();
         
+Session::flash('success_message','contactform submitted successfully');
 
         return view('documents.contact');
 }
@@ -58,6 +61,9 @@ public function addressstore(Request $request){
  $address-> street = $data['streetNumber'];
 
  $address->save();
+
+Session::flash('success_message','addressform submitted successfully');
+
  return view('documents.address');
 }
 }

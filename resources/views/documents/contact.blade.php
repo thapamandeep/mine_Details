@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>
-    <div id="prodesigned">
+
+@if(Session::has('success_message'))
+    <div class="successMessage" >
+        {{session('success_message')}}
+    </div>
+@endif
+
+
+@if(Session::has('error_message'))
+    <div class="errorMessage">
+        {{session('error_message')}}
+    </div>
+@endif
+
+<div id="prodesigned">
+
+
         <form action="{{ route('contactStore') }}" method="post">@csrf
     <h1 id="heading">Contact</h1>
     <input id="inputbox" type="text" placeholder="enter your phone number" name="yourNumber">

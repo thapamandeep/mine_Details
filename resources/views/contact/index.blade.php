@@ -35,7 +35,7 @@ tr:nth-child(even) {
             <th>your Number</th>
     </tr>
   
-    @foreach($allcontacts as $contact)
+    @foreach($somecontacts as $contact)
     
     <tr>
         <td>{{ $contact->email }}</td>

@@ -41,20 +41,6 @@ tr:nth-child(even) {
 
     </table>
     
-    <table>
-
-    <tr>
-            <th>your Emailr</th>
-            <th>your Number</th>
-    </tr>
-  
-    @foreach($allcontacts as $contact)
-    
-    <tr>
-        <td>{{ $contact->email }}</td>
-        <td>{{ $contact->number }}</td>
-    </tr>
-    @endforeach
-    </table>
+   
 </body>
 </html>
