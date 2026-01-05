@@ -80,17 +80,26 @@ class proconaddController extends Controller
       return view ('Address.index',compact('alladdresses'));
    }
 
+
+   // for address view show only one
+
    public function addressView($id){
       $someaddress = Address::findOrFail($id);
 
       return view('Address.addressview', compact('someaddress'));
    }
 
-   public function profileview($id){
-      $someprofile = About::findOrFail($id);
 
-      return view('profile.profileview', compact('someprofile'));
+   // for profile view show only one
+   
+   public function profileview(About $about){
+      // $someprofile = About::findOrFail($id);
+
+
+      return view('profile.profileview', compact('about'));
    }
+
+   // for contact view show only one
 
    public function contactview($id){
       $somecontact = Contact::findOrFail($id);
@@ -98,5 +107,14 @@ class proconaddController extends Controller
       return view('contact.contactview', compact('somecontact'));
    }
 
+// for profile edit 
+
+public function profileedit(About $about){
+
+   
+
+   return view('profile.profileedit', compact('about'));
+
+}
    
 }

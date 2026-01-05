@@ -9,8 +9,8 @@
 <h2>Profile Detail</h2>
 
 <tr>
-<td>{{ $someprofile->surename }}</td>
-<td>{{ $someprofile->firstname }}</td>
+<td>{{ $about->surename }}</td>
+<td>{{ $about->firstname }}</td>
 </tr>
 
 

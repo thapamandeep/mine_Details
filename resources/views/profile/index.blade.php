@@ -31,6 +31,7 @@ tr:nth-child(even) {
             <th>SurName</th>
             <th>First Name</th>
             <th>Action</th>
+            <th>Edition</th>
            
         </tr>
           @foreach($allabouts as $profile)
@@ -38,6 +39,10 @@ tr:nth-child(even) {
             <td>{{$profile->surename}}</td>
             <td>{{$profile->firstname}}</td>
             <td><a href="{{ route('profileDataview', $profile->id) }}"><button>View</button></a></td>
+
+            @foreach($allabouts as $about)
+            <td><a href="{{ route('profileDataedit', $about->id) }}"><button>Edit</button></a></td>
+            @endforeach
         </tr>
     @endforeach
 

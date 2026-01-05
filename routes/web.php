@@ -14,9 +14,12 @@ Route::get('/address-table-view',[proconaddController::class,'addresstable'])->n
 
 // for single view data
 
-Route::get('/address-data-view/view/{id}',[proconaddController::class,'addressview'])->name('addressDataview');
-Route::get('/profile-data-view/view/{id}',[proconaddController::class,'profileview'])->name('profileDataview');
-Route::get('/contact-data-view/view/{id}',[proconaddController::class,'contactview'])->name('contactDataview');
+Route::get('/address-data-view/{id}',[proconaddController::class,'addressview'])->name('addressDataview');
+Route::get('/profile-data-view/{about}',[proconaddController::class,'profileview'])->name('profileDataview');
+Route::get('/contact-data-view/{id}',[proconaddController::class,'contactview'])->name('contactDataview');
+
+//for edit profile
+Route::get('/profile-data-edit/{about}',[proconaddController::class,'profileedit'])->name('profileDataedit');
 
 // 
 
