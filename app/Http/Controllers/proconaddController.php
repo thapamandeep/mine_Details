@@ -111,10 +111,23 @@ class proconaddController extends Controller
 
 public function profileedit(About $about){
 
-   
-
    return view('profile.profileedit', compact('about'));
 
+}
+
+// for contact edit
+public function contactedit(Contact $contact){
+
+
+   return view('contact.contactedit',compact('contact'));
+}
+
+// for address edit
+
+public function addressedit(Address $address){
+
+   
+   return view('Address.addressedit', compact('address'));
 }
    
 }

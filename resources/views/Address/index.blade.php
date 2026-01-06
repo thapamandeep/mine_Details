@@ -31,13 +31,14 @@ tr:nth-child(even) {
         <th>City</th>
         <th>Street</th>
         <th>Action</th>
+        <th>edition</th>
     </tr>
 @foreach($alladdresses as $address)
     <tr>
         <td>{{ $address->city }}</td>
         <td>{{ $address->street }}</td>
-
        <td><a href="{{ route('addressDataview', $address->id)}}"><button >View</button></a></td>
+       <td><a href="{{ route('addressDataedit', $address->id)}}"><button >Edit</button></a></td>
        
     </tr>
     @endforeach

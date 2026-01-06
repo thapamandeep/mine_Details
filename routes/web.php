@@ -21,7 +21,12 @@ Route::get('/contact-data-view/{id}',[proconaddController::class,'contactview'])
 //for edit profile
 Route::get('/profile-data-edit/{about}',[proconaddController::class,'profileedit'])->name('profileDataedit');
 
-// 
+// for edit contact
+Route::get('/contact-data-edit/{contact}',[proconaddController::class,'contactedit'])->name('contactDataedit');
+
+// for edit address
+Route::get('/address-data-edit/{address}',[proconaddController::class,'addressedit'])->name('addressDataedit');
+
 
 Route::post('/about-mine',[AboutmineController::class,'profilestore'])->name('profileStore');
 Route::post('/contact-mine',[AboutmineController::class,'contactstore'])->name('contactStore');
