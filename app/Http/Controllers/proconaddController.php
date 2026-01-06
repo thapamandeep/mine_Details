@@ -129,5 +129,19 @@ public function addressedit(Address $address){
    
    return view('Address.addressedit', compact('address'));
 }
+
+// for update profile
+public function updateProfile(About $about, Request $request){
+   
+
+   $about->update([
+      'surename'=>$request['sureName'],
+      'firstname'=>$request['firstName'],
+   ]);
+
+   $allabouts = About::all();
+
+return view('profile.index',compact('allabouts'));
+}
    
 }

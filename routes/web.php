@@ -27,6 +27,8 @@ Route::get('/contact-data-edit/{contact}',[proconaddController::class,'contacted
 // for edit address
 Route::get('/address-data-edit/{address}',[proconaddController::class,'addressedit'])->name('addressDataedit');
 
+// for update profile
+Route::post('/profile-update/{about}',[proconaddController::class,'updateProfile'])->name('profileUpdate');
 
 Route::post('/about-mine',[AboutmineController::class,'profilestore'])->name('profileStore');
 Route::post('/contact-mine',[AboutmineController::class,'contactstore'])->name('contactStore');

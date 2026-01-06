@@ -12,7 +12,7 @@
 
 
    
-    <form action="{{ route('profileDataedit', $about->id) }}", method="post">@csrf 
+    <form action="{{ route('profileUpdate', $about->id) }}", method="post">@csrf 
        <h1 id="heading">Profile</h1> 
 
        <input id="inputbox" type="text" placeholder="Enter your Surename" name="sureName" value="{{$about->surename}}">
